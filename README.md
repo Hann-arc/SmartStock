@@ -95,11 +95,10 @@ dotnet run
 https://localhost:5001/swagger
 ```
 
----
 
 ## Project Structure
 
-````text
+```bash
 SmartStock/
 ├── Controllers/           # RESTful API controllers
 ├── Data/                  # DbContext & database configuration
@@ -119,26 +118,24 @@ SmartStock/
 ├── SmartStockAI.csproj    # Project configuration
 ├── SmartStockAI.http      # HTTP request samples
 └── SmartStockAI.sln       # Solution file
-
----
-
+```
 ## API Usage Examples
 
 ### Authentication – Login
 
-```http
-POST /api/auth/login
-Content-Type: application/json
+  ```http
+    POST /api/auth/login
+    Content-Type: application/json
 
-{
-  "email": "admin@smartstock.ai",
-  "password": "Admin123!"
-}
-```
+    {
+      "email": "admin@smartstock.ai",
+      "password": "Admin123!"
+    }
+  ```
 
 ### Create Item (Admin Only)
 
-```http
+```json
 POST /api/items
 Authorization: Bearer <token>
 Content-Type: application/json
@@ -154,14 +151,14 @@ Content-Type: application/json
 
 ### AI Demand Forecasting
 
-```http
+```bash
 GET /api/forecast/f4637157-d4b9-4cc5-9244-88cec2b6f037?daysAhead=7
 Authorization: Bearer <token>
 ```
 
 ### Stock Transaction – Stock In
 
-```http
+```json
 POST /api/stock/in
 Authorization: Bearer <token>
 Content-Type: application/json
@@ -175,5 +172,3 @@ Content-Type: application/json
 ## License
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
-
----
