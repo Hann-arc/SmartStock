@@ -1,0 +1,6 @@
+@SmartStockAI_HostAddress = http://localhost:5137
+
+GET {{SmartStockAI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
